@@ -1,0 +1,20 @@
+{
+  "name": "avi-on-session",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.min.js",
+  "scripts": {
+    "build": "babel index.js --presets babel-preset-es2015 --out-file index.min.js",
+    "prepublish": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.16.2",
+    "moment": "^2.15.1"
+  },
+  "devDependencies": {
+    "babel": "^4.4.5",
+    "babel-core": "^4.4.5"
+  }
+}
