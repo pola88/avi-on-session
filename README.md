@@ -1,7 +1,16 @@
-# myaccount
-My account panel
+# Avi-On-Session
 
 ## Backend Developer Information
+
+	Important note: env variables with url should be set with their `http://` or `https://`
+
+	```
+	URL_API=http://localhost:3000/api/
+	MYACCOUNT_HOST=http://localhost:3001
+	ADMIN_HOST=http://localhost:3002
+	CSR_HOST=http://localhost:3007
+	SESSION_HOST=http://localhost:3003
+	```
 
 ### Install Node
 
