@@ -71,7 +71,7 @@ export default class Session {
     if(!credentials) {
       let loginPage = __SESSION_HOST__;
       var previousUrl = window.location.origin;
-      if(loginPage !== `//${window.location.host}`) {
+      if(url.parse(loginPage).host !== window.location.host) {
         if(window.location.pathname !== "/login" && window.location.pathname !== "/logout") {
           previousUrl += window.location.pathname;
           loginPage = `${loginPage}?previous_url=${previousUrl}`;
@@ -94,7 +94,7 @@ export default class Session {
     let host = urlParts.host;
     //if the user has not permission for this page, it will be redirected to another page
     if(!_.includes(pages, host)) {
-      window.location.href = `//${pages[0]}`;
+      window.location.href = pages[0];
       return false;
     } else {
       return true;
@@ -130,7 +130,7 @@ export default class Session {
     let host = urlParts.host;
     //if the user has not permission for this page, it will be redirected to another page
     if(!_.includes(pages, host)) {
-      window.location.href = `//${pages[0]}`;
+      window.location.href = pages[0];
     }
   }
 
